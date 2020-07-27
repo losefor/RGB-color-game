@@ -1,11 +1,12 @@
-:root{
-  --primary-color : #00B0FF 
+:root {
+  --primary-color: #00b0ff;
 }
 
 body {
   margin: 0px;
   background-color: rgb(31, 31, 31);
   font-family: "montserrat", "avenir";
+  overflow-x: hidden;
 }
 
 button {
@@ -71,11 +72,10 @@ h1 {
   font-size: 20px;
 }
 
-
 #stribe span {
-    font-size: 20px;
-    font-family: 'sans-serif';
-  }
+  font-size: 20px;
+  font-family: "sans-serif";
+}
 
 #container {
   max-width: 80%;
@@ -88,7 +88,28 @@ h1 {
   font-size: 13px;
 }
 
+.darkTheme {
+  flex: 1;
+}
+.menu-main-cont {
+  position: relative;
+}
+.menu-main-cont:hover .menu-cont-1 {
+  transform: translateX(0%);
+}
 
-.darkTheme{
-  background-color: rgb(241, 241, 241);
+.menu-cont {
+  position: absolute;
+  right: 0px;
+  background-color: white;
+  width: 300px;
+  transition: 1s ease-in-out;
+}
+
+.menu-cont button {
+  flex: 1;
+}
+
+.menu-cont-1{
+  transform: translateX(200%);
 }
