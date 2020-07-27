@@ -12,4 +12,4 @@ just download the the file and run the ** colorGame.html **
 
 ## preview of the game 
 
-[pic 1](https://github.com/losefor/RGB-color-game/blob/master/photos/pic.png?raw=true)
+[pic 1](https://github.com/losefor/RGB-color-game/blob/master/photos/pic1.png?raw=true)
