@@ -4,7 +4,6 @@ var colorDisplay = document.querySelector(".colorDisplay");
 var easyButton = document.querySelector("#easyButton");
 var hardButton = document.querySelector("#hardButton");
 var darkTheme = document.querySelector("#darkTheme");
-var txtbtn = document.querySelector("#txtbtn");
 var VereyHardButton = document.querySelector("#vereyHardButton");
 var h1 = document.querySelector("h1");
 var resetButton = document.querySelector(".resetButton");
@@ -135,7 +134,7 @@ function resetColors() {
   colorDisplay.textContent = colorPicker;
   //change the colors
 
-  for (var i = 0; i <= squares.length; i++) {
+  for (var i = 0; i < squares.length; i++) {
     if (colors[i]) {
       squares[i].style.backgroundColor = colors[i];
       squares[i].style.display = "block";
@@ -145,7 +144,7 @@ function resetColors() {
   }
 }
 
-for (var i = 0; i <= squares.length; i++) {
+for (var i = 0; i < squares.length; i++) {
   if (colors[i]){
     squares[i].style.backgroundColor = colors[i];
     squares[i].style.display = "block";}
@@ -167,7 +166,7 @@ for (var i = 0; i <= squares.length; i++) {
 }
 
 function autoChange(color) {
-  for (var i = 0; i <= squares.length; i++) {
+  for (var i = 0; i < squares.length; i++) {
     squares[i].style.background = color;
   }
 }
