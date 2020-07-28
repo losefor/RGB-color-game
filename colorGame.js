@@ -28,7 +28,7 @@ darkTheme.addEventListener("click", () => {
 easyButton.addEventListener("click", selectEasy);
 
 function selectEasy() {
-  h1.style.backgroundColor = "steelblue";
+  h1.style.backgroundColor = "#00b0ff";
   //select three colors
   colorNum = 3;
   colors = gerateRandomColor(colorNum);
@@ -57,7 +57,7 @@ function selectEasy() {
 hardButton.addEventListener("click", selectHard);
 
 function selectHard() {
-  h1.style.backgroundColor = "steelblue";
+  h1.style.backgroundColor = "#00b0ff";
   //select three colors
   colorNum = 6;
   colors = gerateRandomColor(colorNum);
@@ -86,7 +86,7 @@ function selectHard() {
 vereyHardButton.addEventListener("click", selectVereyHard);
 
 function selectVereyHard() {
-  h1.style.backgroundColor = "steelblue";
+  h1.style.backgroundColor = "#00b0ff";
   //select three colors
   colorNum = 9;
   colors = gerateRandomColor(colorNum);
@@ -116,7 +116,7 @@ function resetColors() {
   //reset the score disblay
   scoreDisplay.textContent = "";
   //rest nav color
-  h1.style.backgroundColor = "steelblue";
+  h1.style.backgroundColor = "#";
   //pick new colors
   var colors = gerateRandomColor(colorNum);
   //pick new collor of these colors
