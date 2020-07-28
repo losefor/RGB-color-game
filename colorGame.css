@@ -53,7 +53,7 @@ h1 {
 
 .square {
   width: 30%;
-  margin: 1.66%;
+  margin: 1.66% !important;
   background-color: rgb(95, 95, 95);
   padding-bottom: 30%;
   float: left;
@@ -79,7 +79,7 @@ h1 {
 }
 
 #container {
-  max-width: 30%;
+  max-width: 50%;
   margin: 20px auto;
 }
 
