@@ -43,7 +43,7 @@ function selectEasy() {
     if (colors[i]) {
       squares[i].style.marginRight="0px"
       squares[i].style.width="30%";
-      squares[i].style.paddingBottom="30%";
+      // squares[i].style.paddingBottom="30%";
       squares[i].style.backgroundColor = colors[i];
     } else {
       squares[i].style.display = "none";
@@ -63,7 +63,7 @@ hardButton.addEventListener("click", selectHard);
 function selectHard() {
   h1.style.backgroundColor = "#00b0ff";
   //select three colors
-  colorNum = 8;
+  colorNum = 9;
   colors = gerateRandomColor(colorNum);
 
   //genreate rando colors
@@ -73,9 +73,9 @@ function selectHard() {
   console.log(colors, colorPicker);
   for (var i = 0; i < squares.length; i++) {
       if (colors[i]) {
-          squares[i].style.marginRight="35px"
-          squares[i].style.width="20%";
-          squares[i].style.paddingBottom="20%";
+          squares[i].style.marginRight="1.1%"
+          squares[i].style.width="30%";
+          // squares[i].style.paddingBottom="20%";
           squares[i].style.display = "block";
           squares[i].style.backgroundColor = colors[i];}
       else {
@@ -102,9 +102,9 @@ function selectVereyHard() {
   // show the colors
   console.log(colors, colorPicker);
   for (var i = 0; i < squares.length; i++) {
-    squares[i].style.marginRight="35px"
-    squares[i].style.width="15%";
-    squares[i].style.paddingBottom="15%";
+    // squares[i].style.marginRight="30%"
+    squares[i].style.width="30%";
+    // squares[i].style.paddingBottom="15%";
     squares[i].style.backgroundColor = colors[i];
     squares[i].style.display = "block";
   }
@@ -137,7 +137,9 @@ function resetColors() {
   for (var i = 0; i < squares.length; i++) {
     if (colors[i]) {
       squares[i].style.backgroundColor = colors[i];
+      squares[i].style.width = "30%";
       squares[i].style.display = "block";
+
     } else {
       squares[i].style.display = "none";
     }

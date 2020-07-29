@@ -51,9 +51,19 @@ h1 {
   color: white;
 }
 
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 20%;
+  margin: 20px auto;
+}
+
+
 .square {
-  width: 30%;
-  margin: 1.66% !important;
+  width:30%;
+
+  /* flex:.33; */
+  margin: 1.66% !important ;
   background-color: rgb(95, 95, 95);
   padding-bottom: 30%;
   float: left;
@@ -79,10 +89,6 @@ h1 {
   
 }
 
-#container {
-  max-width: 50%;
-  margin: 20px auto;
-}
 
 #scoreDisplay {
   display: inline-block;
@@ -113,6 +119,15 @@ h1 {
   padding: 0;
   margin: 0;
   transition: 1s ease-in-out;
+}
+
+@media(max-width:1500px){
+
+  #container {
+    max-width: 40%;
+    margin: 20px auto;
+  }
+
 }
 
 
