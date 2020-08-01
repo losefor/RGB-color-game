@@ -128,7 +128,7 @@ resetButton.addEventListener("click", resetColors);
 
 function resetColors() {
   //reset butto text
-  resetButton.textContent = "change colors";
+  resetButton.textContent = "next colors";
   //reset the score disblay
   scoreDisplay.textContent = "";
   //rest nav color
