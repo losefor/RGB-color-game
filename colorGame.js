@@ -13,7 +13,7 @@ var colorPicker = colors[randomGenerator()];
 const scoreSpan = document.querySelector("#score");
 const menu =  document.querySelector('#menu')
 const menuDrawer = document.querySelector('#menuDrawer')
-
+var canAnswer = true 
 
 var score = 0;
 
@@ -141,6 +141,7 @@ function selectVereyHard() {
 resetButton.addEventListener("click", resetColors);
 
 function resetColors() {
+  canAnswer = true 
   //reset butto text
   resetButton.textContent = "next colors";
   //reset the score disblay
@@ -180,7 +181,12 @@ for (var i = 0; i < squares.length; i++) {
     if (colorPicker === colorPicked) {
       scoreDisplay.textContent = "Correct!!";
       resetButton.textContent = "next level!!";
-      score += 1;
+      if(canAnswer){
+        score += 1;
+        canAnswer = false ; 
+      }
+
+
       scoreSpan.innerHTML = score;
       h1.style.backgroundColor = colorPicked;
       autoChange(colorPicked);
