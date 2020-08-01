@@ -107,7 +107,7 @@ h1 {
   position: relative;
 }
 .menu-main-cont:hover .menu-cont {
-  display: flex;
+  display: flex !important;
 }
 
 .menu-cont {

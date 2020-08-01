@@ -11,6 +11,9 @@ var squares = document.querySelectorAll(".square");
 var scoreDisplay = document.querySelector("#scoreDisplay");
 var colorPicker = colors[randomGenerator()];
 const scoreSpan = document.querySelector("#score");
+const menu =  document.querySelector('#menu')
+const menuDrawer = document.querySelector('#menuDrawer')
+
 
 var score = 0;
 
@@ -19,6 +22,9 @@ scoreSpan.innerHTML = score;
 colorDisplay.textContent = colorPicker;
 
 darkTheme.addEventListener("click", () => {
+  menuDrawer.style.display = 'none'
+
+
   if (document.querySelector("body").classList.value == "darkTheme") {
     document.querySelector("body").className = "";
     scoreDisplay.style.color = "black";
@@ -36,6 +42,9 @@ darkTheme.addEventListener("click", () => {
 //selecting the easy mode
 easyButton.addEventListener("click", selectEasy);
 function selectEasy() {
+
+  menuDrawer.style.display = 'none'
+
   h1.style.backgroundColor = "#00b0ff";
   //select three colors
   colorNum = 3;
@@ -68,6 +77,9 @@ function selectEasy() {
 hardButton.addEventListener("click", selectHard);
 
 function selectHard() {
+
+  menuDrawer.style.display = 'none'
+
   h1.style.backgroundColor = "#00b0ff";
   //select three colors
   colorNum = 9;
@@ -100,6 +112,8 @@ function selectHard() {
 vereyHardButton.addEventListener("click", selectVereyHard);
 
 function selectVereyHard() {
+  menuDrawer.style.display = 'none'
+
   h1.style.backgroundColor = "#00b0ff";
   //select three colors
   colorNum = 15;
@@ -212,3 +226,8 @@ function rgbGenerator() {
   var rgbColor = "rgb(" + r + ", " + g + ", " + b + ")";
   return rgbColor;
 }
+
+
+menu.addEventListener('click' , ()=>{
+  menuDrawer.style.display = 'flex'
+})
