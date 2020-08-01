@@ -4,11 +4,17 @@
 
 body {
   margin: 0px;
-  background-color: rgb(31,31,31);
+  background-color: rgb(31, 31, 31);
   font-family: "montserrat", "avenir";
   overflow-x: hidden;
 }
 
+.score-cont {
+  color: #01a3ee;
+  font-weight: bold;
+}
+#score {
+}
 button {
   border: none;
   background: none;
@@ -21,6 +27,7 @@ button {
   letter-spacing: 1.1px;
   outline: none;
 }
+
 button:hover {
   color: white;
   background-color: var(--primary-color);
@@ -43,7 +50,8 @@ h1 {
 .colorDisplay {
   font-size: 120%;
   transition: all 0.3s;
-  font-weight: 600;
+  font-weight: bold;
+  font-family: sans-serif;
 }
 
 .selected {
@@ -58,11 +66,8 @@ h1 {
   margin: 20px auto;
 }
 
-
 .square {
-  width:30%;
-
-  /* flex:.33; */
+  width: 30%;
   margin: 1.66% !important ;
   background-color: rgb(95, 95, 95);
   padding-bottom: 30%;
@@ -86,9 +91,7 @@ h1 {
 #stribe span {
   font-size: 20px;
   font-family: "sans-serif";
-  
 }
-
 
 #scoreDisplay {
   display: inline-block;
@@ -107,9 +110,7 @@ h1 {
   display: flex;
 }
 
-
 .menu-cont {
-  
   display: none;
   flex-direction: column;
   position: absolute;
@@ -121,18 +122,14 @@ h1 {
   transition: 1s ease-in-out;
 }
 
-@media(max-width:1500px){
-
+@media (max-width: 1500px) {
   #container {
     max-width: 40%;
     margin: 20px auto;
   }
-
 }
 
-
-@media(max-width:600px){
-
+@media (max-width: 600px) {
   #container {
     max-width: 90%;
     margin: 20px auto;
@@ -143,8 +140,15 @@ h1 {
   }
 
   #stribe button {
-       font-size: 10px;
-       height: 30px;
-   
+    font-size: 15px;
+    height: 30px;
+  }
+
+  .score-cont {
+    font-size: 15px !important;
+    height: 30px;
+  }
+  .colorDisplay{
+    font-size: 34px;
   }
 }

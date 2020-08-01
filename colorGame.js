@@ -10,20 +10,27 @@ var resetButton = document.querySelector(".resetButton");
 var squares = document.querySelectorAll(".square");
 var scoreDisplay = document.querySelector("#scoreDisplay");
 var colorPicker = colors[randomGenerator()];
+const scoreSpan = document.querySelector("#score");
+
+var score = 0;
+
+scoreSpan.innerHTML = score;
+
 colorDisplay.textContent = colorPicker;
 
 darkTheme.addEventListener("click", () => {
   if (document.querySelector("body").classList.value == "darkTheme") {
     document.querySelector("body").className = "";
-    scoreDisplay.style.color="black"
-    darkTheme.textContent="WHITETHEME"
-    document.querySelector("#stribe").style.backgroundColor = "white";}
-    else {
+    scoreDisplay.style.color = "black";
+    darkTheme.textContent = "WHITETHEME";
+    document.querySelector("#stribe").style.backgroundColor = "white";
+  } else {
     document.querySelector("body").className = "darkTheme";
-    darkTheme.textContent="DARKTHEME"
-    scoreDisplay.style.color="white"
- 
-    document.querySelector("#stribe").style.backgroundColor = 'rgb(31, 31, 31)';}
+    darkTheme.textContent = "DARKTHEME";
+    scoreDisplay.style.color = "white";
+
+    document.querySelector("#stribe").style.backgroundColor = "rgb(31, 31, 31)";
+  }
   // if( document.querySelector('body').classList.)
 });
 //selecting the easy mode
@@ -41,8 +48,8 @@ function selectEasy() {
   console.log(colors, colorPicker);
   for (var i = 0; i < squares.length; i++)
     if (colors[i]) {
-      squares[i].style.marginRight="0px"
-      squares[i].style.width="30%";
+      squares[i].style.marginRight = "0px";
+      squares[i].style.width = "30%";
       // squares[i].style.paddingBottom="30%";
       squares[i].style.backgroundColor = colors[i];
     } else {
@@ -72,14 +79,15 @@ function selectHard() {
   // show the colors
   console.log(colors, colorPicker);
   for (var i = 0; i < squares.length; i++) {
-      if (colors[i]) {
-          squares[i].style.marginRight="1.1%"
-          squares[i].style.width="30%";
-          // squares[i].style.paddingBottom="20%";
-          squares[i].style.display = "block";
-          squares[i].style.backgroundColor = colors[i];}
-      else {
-      squares[i].style.display = "none";}
+    if (colors[i]) {
+      squares[i].style.marginRight = "1.1%";
+      squares[i].style.width = "30%";
+      // squares[i].style.paddingBottom="20%";
+      squares[i].style.display = "block";
+      squares[i].style.backgroundColor = colors[i];
+    } else {
+      squares[i].style.display = "none";
+    }
   }
   //highlight easy button
   easyButton.classList.remove("selected");
@@ -94,7 +102,7 @@ vereyHardButton.addEventListener("click", selectVereyHard);
 function selectVereyHard() {
   h1.style.backgroundColor = "#00b0ff";
   //select three colors
-  colorNum =15;
+  colorNum = 15;
   colors = gerateRandomColor(colorNum);
   //genreate rando colors
   colorPicker = colors[randomGenerator()];
@@ -103,7 +111,7 @@ function selectVereyHard() {
   console.log(colors, colorPicker);
   for (var i = 0; i < squares.length; i++) {
     // squares[i].style.marginRight="30%"
-    squares[i].style.width="30%";
+    squares[i].style.width = "30%";
     // squares[i].style.paddingBottom="15%";
     squares[i].style.backgroundColor = colors[i];
     squares[i].style.display = "block";
@@ -139,7 +147,6 @@ function resetColors() {
       squares[i].style.backgroundColor = colors[i];
       squares[i].style.width = "30%";
       squares[i].style.display = "block";
-
     } else {
       squares[i].style.display = "none";
     }
@@ -147,23 +154,30 @@ function resetColors() {
 }
 
 for (var i = 0; i < squares.length; i++) {
-  if (colors[i]){
+  if (colors[i]) {
     squares[i].style.backgroundColor = colors[i];
-    squares[i].style.display = "block";}
-  else{
-      squares[i].style.display = "none";}
+    squares[i].style.display = "block";
+  } else {
+    squares[i].style.display = "none";
+  }
   squares[i].addEventListener("click", function () {
     var colorPicked = this.style.backgroundColor;
     console.log(colorPicked, colorPicker);
     if (colorPicker === colorPicked) {
       scoreDisplay.textContent = "Correct!!";
-      resetButton.textContent = "play again ?";
+      resetButton.textContent = "next level!!";
+      score += 1;
+      scoreSpan.innerHTML = score;
       h1.style.backgroundColor = colorPicked;
       autoChange(colorPicked);
-      resetButton.textContent = "Play again !";}
-    else {
-        scoreDisplay.textContent = "wrong!";
-        this.style.backgroundColor = "rgb(26, 26, 26)";}
+      resetButton.textContent = "Play again !";
+    } else {
+      score = 0;
+      scoreSpan.innerHTML = score;
+
+      scoreDisplay.textContent = "wrong!";
+      this.style.backgroundColor = "rgb(26, 26, 26)";
+    }
   });
 }
 
@@ -185,16 +199,16 @@ function gerateRandomColor(num) {
   //create loob
   for (var i = 0; i < num; i++)
     //push the colors in to array
-    arr.push(rgbGerator());
+    arr.push(rgbGenerator());
 
   return arr;
 }
 
-function rgbGerator() {
+function rgbGenerator() {
   var r = Math.floor(Math.random() * 256);
   var g = Math.floor(Math.random() * 256);
   var b = Math.floor(Math.random() * 256);
 
-  var rgbColor = "rgb("+r+", "+g+", "+b+")";
+  var rgbColor = "rgb(" + r + ", " + g + ", " + b + ")";
   return rgbColor;
 }

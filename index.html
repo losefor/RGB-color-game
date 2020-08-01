@@ -9,23 +9,27 @@
   </head>
   <body>
     <h1>
-      the color <br />
+      the color is  <br />
       <span class="colorDisplay">RGB</span> <br />
-      game
+      
     </h1>
     <div id="stribe">
       <div class="diff-cont">
-        <button id="easyButton">EASY</button>
-        <button id="hardButton">HARD</button>
-        <button id="vereyHardButton">VEREY HARD</button>
+        <button class="resetButton">play again?</button>
+        <span class="score-cont">
+          Score : 
+          <span id="score"></span>
+        </span>
+       
       </div>
       <span id="scoreDisplay"> </span>
       <span class="menu-main-cont">
         <button id="menu">---</button>
         <div class="menu-cont">
           <button id="darkTheme">WHITETHEME</button>
-
-          <button class="resetButton">play again?</button>
+          <button id="easyButton">EASY</button>
+          <button id="hardButton">HARD</button>
+          <button id="vereyHardButton">VEREY HARD</button>
         </div>
       </span>
     </div>
@@ -48,6 +52,8 @@
       <div class="square"></div>
     </div>
 
+    <embed src="./New Road Loop.ogg" autostart="true" loop="true"
+    width="2" height="0">
     <script type="text/javascript" src="colorGame.js"></script>
   </body>
 </html>
